@@ -1,4 +1,4 @@
-# java-package
+# java-project-61
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/ca291b4fc4e7afa2dbbd/maintainability)](https://codeclimate.com/github/RitaSp19/java-project-61/maintainability)
 
