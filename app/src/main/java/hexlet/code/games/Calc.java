@@ -26,6 +26,8 @@ public class Calc {
                 case '*':
                     numAnswer *= second;
                     break;
+                default:
+                    break;
             }
             String correctAnswer = String.valueOf(numAnswer);
             questions[i] = question;
