@@ -10,14 +10,16 @@ public class Even {
 
     public static void playEven() {
         String condition = "Answer 'yes' if the number is even, otherwise answer 'no'.";
+        String[] questions = new String[Engine.ATTEMPTS];
+        String[] correctAnswers = new String[Engine.ATTEMPTS];
 
         for (int i = 0; i < Engine.ATTEMPTS; i++) {
             int number = (int) (Math.random() * MAX_RANDOM_NUMBER);
             String question = String.valueOf(number);
             String correctAnswer = (number % 2 == 0) ? ANSWER_YES : ANSWER_NO;
-            Engine.questions[i] = question;
-            Engine.correctAnswers[i] = correctAnswer;
+            questions[i] = question;
+            correctAnswers[i] = correctAnswer;
         }
-        Engine.engine(condition);
+        Engine.engine(condition, questions, correctAnswers);
     }
 }

@@ -5,10 +5,8 @@ import java.util.Scanner;
 public class Engine {
 
     public static final int ATTEMPTS = 3;
-    public static String[] questions = new String[ATTEMPTS];
-    public static String[] correctAnswers = new String[ATTEMPTS];
 
-    public static void engine(String condition) {
+    public static void engine(String condition, String[] questions, String[] correctAnswers) {
         Scanner in = new Scanner(System.in);
         System.out.println("Welcome to the Brain Games!");
         System.out.print("May I have your name? ");

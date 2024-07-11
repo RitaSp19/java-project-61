@@ -11,7 +11,8 @@ public class Progression {
 
     public static void playProgression() {
         String condition = "What number is missing in the progression?";
-
+        String[] questions = new String[Engine.ATTEMPTS];
+        String[] correctAnswers = new String[Engine.ATTEMPTS];
         for (int i = 0; i < Engine.ATTEMPTS; i++) {
             int length = (int) (Math.random() * MAX_PROGRESSION_LENGTH_INCREMENT) + MIN_PROGRESSION_LENGTH;
             int position = (int) (Math.random() * length);
@@ -35,9 +36,9 @@ public class Progression {
                 }
             }
             String question = stringBuilder.toString();
-            Engine.questions[i] = question;
-            Engine.correctAnswers[i] = answer;
+            questions[i] = question;
+            correctAnswers[i] = answer;
         }
-        Engine.engine(condition);
+        Engine.engine(condition, questions, correctAnswers);
     }
 }

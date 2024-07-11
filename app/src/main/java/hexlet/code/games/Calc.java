@@ -9,7 +9,8 @@ public class Calc {
 
     public static void playCalc() {
         String condition = "What is the result of the expression?";
-
+        String[] questions = new String[Engine.ATTEMPTS];
+        String[] correctAnswers = new String[Engine.ATTEMPTS];
 
         for (int i = 0; i < Engine.ATTEMPTS; i++) {
             int first = (int) (Math.random() * MAX_RANDOM_NUMBER);
@@ -32,9 +33,9 @@ public class Calc {
                     break;
             }
             String correctAnswer = String.valueOf(numAnswer);
-            Engine.questions[i] = question;
-            Engine.correctAnswers[i] = correctAnswer;
+            questions[i] = question;
+            correctAnswers[i] = correctAnswer;
         }
-        Engine.engine(condition);
+        Engine.engine(condition, questions, correctAnswers);
     }
 }
