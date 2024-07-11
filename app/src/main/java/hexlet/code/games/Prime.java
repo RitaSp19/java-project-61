@@ -12,7 +12,7 @@ public class Prime {
     public static void playPrime() {
         String condition = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
 
-        for (int i = 0; i < Engine.attempts; i++) {
+        for (int i = 0; i < Engine.ATTEMPTS; i++) {
             int number = (int) (Math.random() * (MAX_NUMBER - MIN_NUMBER + 1)) + MIN_NUMBER;
             String answer = ANSWER_YES;
             if (number <= 1) {

@@ -5,17 +5,17 @@ import hexlet.code.Engine;
 public class Calc {
 
     private static final int MAX_RANDOM_NUMBER = 100;
-    private static final char[] operators  = {'+', '-', '*'};
+    private static final char[] OPERATORS = {'+', '-', '*'};
 
     public static void playCalc() {
         String condition = "What is the result of the expression?";
 
 
-        for (int i = 0; i < Engine.attempts; i++) {
+        for (int i = 0; i < Engine.ATTEMPTS; i++) {
             int first = (int) (Math.random() * MAX_RANDOM_NUMBER);
             int second = (int) (Math.random() * MAX_RANDOM_NUMBER);
-            int operatorPosition = (int) (Math.random() * operators.length);
-            char operator = operators[operatorPosition];
+            int operatorPosition = (int) (Math.random() * OPERATORS.length);
+            char operator = OPERATORS[operatorPosition];
             String question = first + " " + operator + " " + second;
             int numAnswer = first;
             switch (operator) {

@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Engine {
 
-    public static final int attempts = 3;
-    public static String[] questions = new String[attempts];
-    public static String[] correctAnswers = new String[attempts];
+    public static final int ATTEMPTS = 3;
+    public static String[] questions = new String[ATTEMPTS];
+    public static String[] correctAnswers = new String[ATTEMPTS];
 
     public static void engine(String condition) {
         Scanner in = new Scanner(System.in);

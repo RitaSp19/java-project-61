@@ -12,7 +12,7 @@ public class Progression {
     public static void playProgression() {
         String condition = "What number is missing in the progression?";
 
-        for (int i = 0; i < Engine.attempts; i++) {
+        for (int i = 0; i < Engine.ATTEMPTS; i++) {
             int length = (int) (Math.random() * MAX_PROGRESSION_LENGTH_INCREMENT) + MIN_PROGRESSION_LENGTH;
             int position = (int) (Math.random() * length);
             int first = (int) (Math.random() * (MAX_INITIAL_NUMBER - MIN_INITIAL_NUMBER + 1)) + MIN_INITIAL_NUMBER;
