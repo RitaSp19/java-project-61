@@ -19,24 +19,24 @@ public class App {
                 + "6 - Prime\n"
                 + "0 - Exit");
         System.out.print("Your choice: ");
-        int choice = in.nextInt();
+        String choice = in.nextLine();
         switch (choice) {
-            case 1:
+            case "1":
                 Cli.getName();
                 break;
-            case 2:
+            case "2":
                 Even.playEven();
                 break;
-            case 3:
+            case "3":
                 Calc.playCalc();
                 break;
-            case 4:
+            case "4":
                 GCD.playGCD();
                 break;
-            case 5:
+            case "5":
                 Progression.playProgression();
                 break;
-            case 6:
+            case "6":
                 Prime.playPrime();
                 break;
             default:
