@@ -5,11 +5,9 @@ import hexlet.code.Engine;
 public class Calc {
     public static void playCalc() {
         String condition = "What is the result of the expression?";
-        var attempts = 3;
-        String[] questions = new String[attempts];
-        String[] correctAnswers = new String[attempts];
+
         char[] operators  = {'+', '-', '*'};
-        for (int i = 0; i < attempts; i++) {
+        for (int i = 0; i < Engine.attempts; i++) {
             int first = (int) (Math.random() * 100);
             int second = (int) (Math.random() * 100);
             int operatorPosition = (int) (Math.random() * 3);
@@ -30,9 +28,9 @@ public class Calc {
                     break;
             }
             String correctAnswer = String.valueOf(numAnswer);
-            questions[i] = question;
-            correctAnswers[i] = correctAnswer;
+            Engine.questions[i] = question;
+            Engine.correctAnswers[i] = correctAnswer;
         }
-        Engine.engine(condition, questions, correctAnswers);
+        Engine.engine(condition);
     }
 }

@@ -5,10 +5,8 @@ import hexlet.code.Engine;
 public class Progression {
     public static void playProgression() {
         String condition = "What number is missing in the progression?";
-        var attempts = 3;
-        String[] questions = new String[attempts];
-        String[] correctAnswers = new String[attempts];
-        for (int i = 0; i < attempts; i++) {
+
+        for (int i = 0; i < Engine.attempts; i++) {
             int length = (int) (Math.random() * 9) + 5;
             int position = (int) (Math.random() * length);
             int first = (int) (Math.random() * 9) + 1;
@@ -31,9 +29,9 @@ public class Progression {
                 }
             }
             String question = stringBuilder.toString();
-            questions[i] = question;
-            correctAnswers[i] = answer;
+            Engine.questions[i] = question;
+            Engine.correctAnswers[i] = answer;
         }
-        Engine.engine(condition, questions, correctAnswers);
+        Engine.engine(condition);
     }
 }
