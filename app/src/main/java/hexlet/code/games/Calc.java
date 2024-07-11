@@ -3,13 +3,17 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Calc {
+
+    private static final int MAX_RANDOM_NUMBER = 100;
+    private static final char[] operators  = {'+', '-', '*'};
+
     public static void playCalc() {
         String condition = "What is the result of the expression?";
 
-        char[] operators  = {'+', '-', '*'};
+
         for (int i = 0; i < Engine.attempts; i++) {
-            int first = (int) (Math.random() * 100);
-            int second = (int) (Math.random() * 100);
+            int first = (int) (Math.random() * MAX_RANDOM_NUMBER);
+            int second = (int) (Math.random() * MAX_RANDOM_NUMBER);
             int operatorPosition = (int) (Math.random() * operators.length);
             char operator = operators[operatorPosition];
             String question = first + " " + operator + " " + second;

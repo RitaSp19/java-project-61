@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Engine {
 
-    public static int attempts = 3;
+    public static final int attempts = 3;
     public static String[] questions = new String[attempts];
     public static String[] correctAnswers = new String[attempts];
 
