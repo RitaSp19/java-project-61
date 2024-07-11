@@ -10,7 +10,7 @@ public class Calc {
         for (int i = 0; i < Engine.attempts; i++) {
             int first = (int) (Math.random() * 100);
             int second = (int) (Math.random() * 100);
-            int operatorPosition = (int) (Math.random() * 3);
+            int operatorPosition = (int) (Math.random() * operators.length);
             char operator = operators[operatorPosition];
             String question = first + " " + operator + " " + second;
             int numAnswer = first;
